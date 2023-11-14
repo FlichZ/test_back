@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+    <!-- Стили и скрипты -->
+</head>
+<body>
+    <header>
+        <!-- Заголовок, логотип и другие элементы -->
+        
+        <!-- Отображение меню -->
+        {% include 'menu_app/includes/nav.html'%}
+    </header>
+
+    <!-- Контент страницы "About" из базы данных -->
+    <main>
+        {% if about_page %}
+            <h1>{{ about_page.title }}</h1>
+            <p>{{ about_page.content }}</p>
+            <!-- Другие поля модели MenuItem, которые вы хотите отобразить -->
+        {% else %}
+            <p>Контент страницы "About" не найден.</p>
+        {% endif %}
+    </main>
+
+    <!-- Дополнительные разделы и футер -->
+</body>
+</html>
+
+
